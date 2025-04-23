@@ -1,0 +1,13 @@
+[Unit]
+Description=Sync Dash To Dock theme with Ubuntu theme
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/dash-to-dock-theme-sync.sh
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
